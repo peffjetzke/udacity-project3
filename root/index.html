@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Journal</title>
+</head>
+<body>
+    <div class ="container">
+        <h1 class="head">The Weather Journals</h1>
+        <form>
+            <div class="zipArea">
+                <label for "zip">Zipcode Here:</label>
+                <input type="text" id="zip" placeholder="Enter zip code here">
+            </div>
+            <div class="feelsArea">
+                <label for "feelings">Feels go here:</label>
+                <textarea id="feelings" placeholder="The feels go here!"></textarea>
+            </div>
+            <div class="buttonDiv">
+                <button id="generate" type="submit">Submit</button>
+            </div>
+        </form>
+        <div id="entryHolder">
+            <h2>Entry</h2>
+            <div id="date"></div>
+            <div id="temp"></div>
+            <div id="content"></div>
+        </div>
+    </div>
+</body>
+<script src="./app.js" type="text/javascript"></script>
+</html>

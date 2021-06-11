@@ -1,0 +1,49 @@
+/* body{
+    background-color: gray;
+    color: white;
+}
+
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container input{
+    width: 100%;
+}
+
+
+.container textarea{
+    width: 100%;
+}
+
+
+.head{
+    margin: 100px;
+}
+
+
+label{
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+.zipArea{
+    padding: 10px;
+}
+
+
+.FeelsArea{
+    padding: 10px;
+}
+
+
+.buttonDiv{
+    text-align:  center;
+}
+ */
