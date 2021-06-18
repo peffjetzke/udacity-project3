@@ -1,6 +1,6 @@
 /*Variables*/
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip="; 
-const apiKey = "&appid=b8a55a0b8c9b612c96d2927ca046035c&units=";
+const apiKey = "&appid=b8a55a0b8c9b612c96d2927ca046035c&units="; 
 const units = "imperial";
 let date = new Date(); //setup the date
 let today = date.toLocaleDateString(); //format the date to a string in dd/mm/yyyy format
@@ -29,7 +29,7 @@ const getWeather = async (apiURL)=>{
     const res = await fetch(apiURL) //baseURL+zip+apiKey+units
     try{
         const data = await res.json();
-        console.log(data); //debug check for weather data
+        console.log(data + "1st debug"); //debug check for weather data
         return data;
     } catch(error){
         console.log("There was a problem", error);
@@ -48,7 +48,7 @@ const postData = async (url = '', data = {})=>{
     });
     try{
         const allData = await response.json();
-        console.log(allData);
+        console.log(allData + "you made it here");
         return allData;
     } catch(error){
         console.log("There was a problem", error);
@@ -60,10 +60,10 @@ const updateUI = async () => {
     const request = await fetch('/all');
     try{
         const pageData = await request.json();
-        console.log(pageData); //debug
-        document.getElementById("date").innerHTML = pageData.date;
-        document.getElementById("temp").innerHTML = pageData.temp;
-        document.getElementById("content").innerHTML = pageData.feelings;
+        console.log(pageData + "last debug"); //debug
+        document.getElementById("date").innerHTML = "Date: " + pageData.date;
+        document.getElementById("temp").innerHTML = "Temp: " + pageData.temp + "F";
+        document.getElementById("content").innerHTML = "Your feelings: " +pageData.feelings;
     } catch(error){
         console.log("There was a problem", error);
     }

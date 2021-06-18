@@ -1,4 +1,4 @@
-/* body{
+body{
     background-color: gray;
     color: white;
 }
@@ -46,4 +46,19 @@ label{
 .buttonDiv{
     text-align:  center;
 }
- */
+
+
+#date{
+    font-weight: bold;
+}
+
+
+#temp{
+    font-weight: bold;
+}
+
+
+#content{
+    font-weight: bold;
+}
+

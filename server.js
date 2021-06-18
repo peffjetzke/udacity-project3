@@ -9,7 +9,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-/*bodyParser is returns the depreciated warning. It can still be used and including it instead of express to stay inline with rubric*/
+/*bodyParser returns the depreciated warning. Including it instead of express to stay inline with rubric*/
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -29,12 +29,12 @@ function listening(){
 
 /*Get*/
 // GET method route
-app.get('/all', getData) 
 
 function getData(req, res) {
     res.send(projectData);
   }
 
+app.get('/all', getData) 
 // /*Post*/
 // POST method route
 function postData(req, res) {
@@ -45,7 +45,7 @@ function postData(req, res) {
     projectData["feelings"] = data.feelings;
 
     res.send(projectData);
-    console.log(projectData);
+    console.log(projectData + "server debug");
   }
 
   app.post('/add', postData);
